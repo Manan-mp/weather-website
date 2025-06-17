@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelby Weather Co.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&family=Old+Standard+TT:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="industrial-bg"></div>
+    <div class="container">
+        <header>
+            <div class="razor-blade">
+                <i class="fas fa-cut"></i>
+            </div>
+            <h1>Shelby Weather Co.</h1>
+            <p>By Order of the Peaky Blinders</p>
+            <div class="header-decoration">
+                <span class="ornament">•</span>
+                <span class="divider">━━━━━━━</span>
+                <span class="ornament">•</span>
+            </div>
+        </header>
+        
+        <div class="search-section">
+            <div class="betting-slip">
+                <h3>Weather Forecast</h3>
+                <div class="search-container">
+                    <input type="text" id="cityInput" placeholder="Enter city name..." />
+                    <button id="searchBtn">
+                        <span><i class="fas fa-search"></i> Get Forecast</span>
+                    </button>
+                </div>
+                <div class="betting-stamp">APPROVED</div>
+            </div>
+        </div>
+        
+        <div id="loading" class="loading hidden">
+            <div class="whiskey-glass">
+                <div class="whiskey"></div>
+            </div>
+            <p id="loadingText">Consulting the racing forms...</p>
+        </div>
+        
+        <div id="weatherResult" class="weather-result hidden">
+            <div class="weather-document">
+                <div class="letterhead">
+                    <div class="letterhead-content">
+                        <h2 id="cityName"></h2>
+                        <p id="currentDate"></p>
+                    </div>
+                    <div class="letterhead-seal">
+                        <div class="seal-ring"></div>
+                        <div class="seal-center">SB</div>
+                    </div>
+                </div>
+                
+                <div class="weather-main">
+                    <div class="temperature-display">
+                        <div class="temp-plaque">
+                            <span id="temp"></span>
+                            <span class="unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="weather-icon-container">
+                        <div class="vintage-frame">
+                            <img id="weatherIcon" src="" alt="Weather icon">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="weather-description">
+                    <div class="description-ribbon">
+                        <p id="description"></p>
+                    </div>
+                </div>
+                
+                <div class="weather-details">
+                    <div class="detail-card">
+                        <div class="card-header">Atmospheric Conditions</div>
+                        <div class="detail-item">
+                            <span class="label"><i class="fas fa-temperature-low"></i> Feels like:</span>
+                            <span id="feelsLike"></span>°C
+                        </div>
+                        <div class="detail-item">
+                            <span class="label"><i class="fas fa-tint"></i> Humidity:</span>
+                            <span id="humidity"></span>%
+                        </div>
+                        <div class="detail-item">
+                            <span class="label"><i class="fas fa-wind"></i> Wind Speed:</span>
+                            <span id="windSpeed"></span> m/s
+                        </div>
+                        <div class="detail-item">
+                            <span class="label"><i class="fas fa-tachometer-alt"></i> Pressure:</span>
+                            <span id="pressure"></span> hPa
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="signature-line">
+                    <div class="signature">Thomas Shelby</div>
+                    <div class="signature-title">Managing Director</div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="error" class="error hidden">
+            <div class="arrest-warrant">
+                <h3><i class="fas fa-exclamation-triangle"></i> Location Not Found</h3>
+                <p>This city isn't in our books. Try another location.</p>
+                <div class="warrant-stamp">DENIED</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="industrial-footer">
+        <p>Shelby Company Limited • Established 1919 • Birmingham, England</p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
